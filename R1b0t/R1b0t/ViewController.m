@@ -20,20 +20,24 @@
 
 @synthesize managedObjectContext;
 
+NSInteger currentIndex = -1 ;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    // Go fetch the ManageObjectContext for CoreData
     managedObjectContext = [(AppDelegate *)[UIApplication sharedApplication].delegate managedObjectContext];
     
+    // No Cell Selected
+    currentIndex = -1 ;
     
-    
+    // Fetch all the CoreData entities
     NSFetchRequest * allItems = [[NSFetchRequest alloc] init];
     [allItems setEntity:[NSEntityDescription entityForName:@"RibotMember" inManagedObjectContext:self.managedObjectContext]];
     [allItems setIncludesPropertyValues:NO]; //only fetch the managedObjectID
     
     NSError * error = nil;
     _assets = [self.managedObjectContext executeFetchRequest:allItems error:&error];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,6 +53,8 @@
 
 - (void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    currentIndex = indexPath.row ;
+    [self performSegueWithIdentifier:@"toDetailViewController" sender:self];
  }
 -(void) collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -85,5 +91,10 @@
     return 1;
 }
 
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    ELSDetailViewController *nextView = (ELSDetailViewController*) [segue destinationViewController] ;
+    [nextView initViewWithDetail:self.assets[currentIndex]];
+}
 
 @end

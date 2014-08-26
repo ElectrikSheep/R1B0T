@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		DB3D4B7019ACB88F00D3F23D /* ELSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3D4B6F19ACB88F00D3F23D /* ELSCollectionViewCell.m */; };
 		DB8E598F19AC9C0700B1678D /* ELSImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8E598E19AC9C0700B1678D /* ELSImporter.m */; };
+		DB91898D19ACE299008B7E77 /* descriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB91898C19ACE299008B7E77 /* descriptionView.xib */; };
+		DB91898F19ACEFA4008B7E77 /* mapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB91898E19ACEFA4008B7E77 /* mapView.xib */; };
+		DB91899319ACF008008B7E77 /* ELSdescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB91899219ACF008008B7E77 /* ELSdescriptionView.m */; };
+		DB91899619ACF374008B7E77 /* ELSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB91899519ACF374008B7E77 /* ELSDetailViewController.m */; };
+		DB91899919ACFE45008B7E77 /* ELSMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB91899819ACFE45008B7E77 /* ELSMapView.m */; };
 		DBD56BA919AB82D300DB4EEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD56BA819AB82D300DB4EEF /* main.m */; };
 		DBD56BAC19AB82D300DB4EEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD56BAB19AB82D300DB4EEF /* AppDelegate.m */; };
 		DBD56BAF19AB82D300DB4EEF /* R1b0t.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBD56BAD19AB82D300DB4EEF /* R1b0t.xcdatamodeld */; };
@@ -35,6 +40,14 @@
 		DB3D4B6F19ACB88F00D3F23D /* ELSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELSCollectionViewCell.m; path = Sources/ELSCollectionViewCell.m; sourceTree = "<group>"; };
 		DB8E598D19AC9C0700B1678D /* ELSImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELSImporter.h; sourceTree = "<group>"; };
 		DB8E598E19AC9C0700B1678D /* ELSImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELSImporter.m; sourceTree = "<group>"; };
+		DB91898C19ACE299008B7E77 /* descriptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = descriptionView.xib; path = Assets/descriptionView.xib; sourceTree = "<group>"; };
+		DB91898E19ACEFA4008B7E77 /* mapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mapView.xib; sourceTree = "<group>"; };
+		DB91899119ACF008008B7E77 /* ELSdescriptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELSdescriptionView.h; path = Sources/ELSdescriptionView.h; sourceTree = "<group>"; };
+		DB91899219ACF008008B7E77 /* ELSdescriptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELSdescriptionView.m; path = Sources/ELSdescriptionView.m; sourceTree = "<group>"; };
+		DB91899419ACF374008B7E77 /* ELSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELSDetailViewController.h; path = Sources/ELSDetailViewController.h; sourceTree = "<group>"; };
+		DB91899519ACF374008B7E77 /* ELSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELSDetailViewController.m; path = Sources/ELSDetailViewController.m; sourceTree = "<group>"; };
+		DB91899719ACFE45008B7E77 /* ELSMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELSMapView.h; path = Sources/ELSMapView.h; sourceTree = "<group>"; };
+		DB91899819ACFE45008B7E77 /* ELSMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELSMapView.m; path = Sources/ELSMapView.m; sourceTree = "<group>"; };
 		DBD56BA319AB82D300DB4EEF /* R1b0t.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = R1b0t.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBD56BA719AB82D300DB4EEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBD56BA819AB82D300DB4EEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -79,6 +92,21 @@
 			name = CollectionView;
 			sourceTree = "<group>";
 		};
+		DB91899019ACEFD3008B7E77 /* AdditionalViews */ = {
+			isa = PBXGroup;
+			children = (
+				DB91898C19ACE299008B7E77 /* descriptionView.xib */,
+				DB91898E19ACEFA4008B7E77 /* mapView.xib */,
+				DB91899119ACF008008B7E77 /* ELSdescriptionView.h */,
+				DB91899219ACF008008B7E77 /* ELSdescriptionView.m */,
+				DB91899719ACFE45008B7E77 /* ELSMapView.h */,
+				DB91899819ACFE45008B7E77 /* ELSMapView.m */,
+				DB91899419ACF374008B7E77 /* ELSDetailViewController.h */,
+				DB91899519ACF374008B7E77 /* ELSDetailViewController.m */,
+			);
+			name = AdditionalViews;
+			sourceTree = "<group>";
+		};
 		DBD56B9A19AB82D300DB4EEF = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +128,7 @@
 		DBD56BA519AB82D300DB4EEF /* R1b0t */ = {
 			isa = PBXGroup;
 			children = (
+				DB91899019ACEFD3008B7E77 /* AdditionalViews */,
 				DBD7595A19AC862300F947B1 /* JSON */,
 				DBD7595919AC6EC500F947B1 /* CoreData */,
 				DBD56BAA19AB82D300DB4EEF /* AppDelegate.h */,
@@ -241,6 +270,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBD56BB519AB82D300DB4EEF /* Main.storyboard in Resources */,
+				DB91898F19ACEFA4008B7E77 /* mapView.xib in Resources */,
+				DB91898D19ACE299008B7E77 /* descriptionView.xib in Resources */,
 				DBD56BB719AB82D300DB4EEF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,11 +292,14 @@
 			files = (
 				DB8E598F19AC9C0700B1678D /* ELSImporter.m in Sources */,
 				DBD56BAC19AB82D300DB4EEF /* AppDelegate.m in Sources */,
+				DB91899919ACFE45008B7E77 /* ELSMapView.m in Sources */,
+				DB91899319ACF008008B7E77 /* ELSdescriptionView.m in Sources */,
 				DB3D4B7019ACB88F00D3F23D /* ELSCollectionViewCell.m in Sources */,
 				DBD7595819AC6EB400F947B1 /* RibotMember.m in Sources */,
 				DBD56BAF19AB82D300DB4EEF /* R1b0t.xcdatamodeld in Sources */,
 				DBD56BB219AB82D300DB4EEF /* ViewController.m in Sources */,
 				DBD56BA919AB82D300DB4EEF /* main.m in Sources */,
+				DB91899619ACF374008B7E77 /* ELSDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

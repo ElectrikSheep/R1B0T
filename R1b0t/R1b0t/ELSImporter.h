@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 
 #import "RibotMember.h"
+#import <UIKit/UIKit.h>
 
 @interface ELSImporter : NSObject
 
@@ -18,8 +19,5 @@
 
 -(id) initWithContext:(NSManagedObjectContext*) context;
 
-
 -(void) createRibotersEntitiesInCoreData ;
-
--(void) deleteAllEntitiesOfTYpe:(NSString*) entityName ;
 @end

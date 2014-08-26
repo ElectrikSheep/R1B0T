@@ -21,49 +21,6 @@
 }
 
 
-
-#pragma mark CoreData
--(void) createNewRiboterWithDictionary:(NSDictionary*) member {
-    
-    RibotMember *ribot = [NSEntityDescription
-                          insertNewObjectForEntityForName:@"RibotMember"
-                          inManagedObjectContext:self.managedObjectContext];
-    
-    ribot.firstName = [member objectForKey:@"firstName"];
-    ribot.lastName = [member objectForKey:@"lastName"];
-    ribot.nickName = [member objectForKey:@"nickname"];
-    ribot.location = [member objectForKey:@"location"];
-    ribot.role = [member objectForKey:@"role"];
-    ribot.hexColor = [member objectForKey:@"hexColor"];
-    ribot.twitter = [member objectForKey:@"twitter"];
-    ribot.email = [member objectForKey:@"email"];
-    ribot.favTweet = [member objectForKey:@"favSweet"];
-    ribot.favSeason = [member objectForKey:@"favSeason"];
-    ribot.rDescription = [member objectForKey:@"description"];
-    ribot.identifier = [member objectForKey:@"id"];
-  //  ribot.ribotar = [ELSImporter ribotarFromName:ribot.identifier] ;
-}
-
--(void) deleteAllEntitiesOfTYpe:(NSString*) entityName {
-    NSFetchRequest * allCars = [[NSFetchRequest alloc] init];
-    [allCars setEntity:[NSEntityDescription entityForName:entityName inManagedObjectContext:self.managedObjectContext]];
-    [allCars setIncludesPropertyValues:NO]; //only fetch the managedObjectID
-    
-    NSError * error = nil;
-    NSArray * cars = [self.managedObjectContext executeFetchRequest:allCars error:&error];
-    
-    //error handling goes here
-    for (NSManagedObject * car in cars) {
-        [self.managedObjectContext deleteObject:car];
-    }
-    NSError *saveError = nil;
-    [self.managedObjectContext save:&saveError];
-    //more error handling here
-}
-
-
-
-
 #pragma mark JSON
 -(NSArray*) getArrayFromGETQuery:(NSString *)urlAddress error:(NSError**)error{
     
@@ -122,7 +79,11 @@
         RibotMember *new = [RibotMember itemWithParsedDictionary:member inManagedObjectContext:self.managedObjectContext];
         
         if( new ) {
-            new.ribotar = [self ribotarFromName:new.identifier];
+            NSData*data = [self ribotarFromName:new.identifier];
+            if( [UIImage imageWithData:data] == nil ) {
+                data = UIImagePNGRepresentation( [UIImage imageNamed:@"img_GenericRibotar"]) ;
+            }
+            new.ribotar = data ;
         }
         
         if (![self.managedObjectContext save:&error]) {
@@ -144,7 +105,6 @@
     if( error != nil) {
         NSLog(@"Loading Ribotar failed with :%@", [error description]);
     }
-    
     return requestHandler ;
 }
 

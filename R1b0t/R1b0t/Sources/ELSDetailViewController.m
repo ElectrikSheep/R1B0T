@@ -1,36 +1,69 @@
 //
-//  ELSCollectionViewCell.m
+//  ELSDetailViewController.m
 //  R1b0t
 //
 //  Created by L on 2014-08-26.
 //  Copyright (c) 2014 ElectrikSheep. All rights reserved.
 //
 
-#import "ELSCollectionViewCell.h"
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#import "ELSDetailViewController.h"
 
+@interface ELSDetailViewController ()
 
-@implementation ELSCollectionViewCell
+@end
 
--(void) initCellWith:(NSString*)name andImage:(UIImage*)ribotar {
-    self.riboterName.text = name ;
+@implementation ELSDetailViewController
+
+-(void) initViewWithDetail:(RibotMember *)teammate {
+    self.ribotInfo = teammate ;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
     
-    // Handling the lack of 'Ribotar'
-    if( ribotar == nil ) {
-        NSLog(@"YOU FAILED YOU FAILED YOU FAILED") ;
-        ribotar = [UIImage imageNamed:@"img_GenericRibotar"] ;
-    }
-    self.riboterRibotar.image = ribotar ;
+    
+    // Adding the SubViews to the scroll view
+    ELSdescriptionView *descriptionView = [[ELSdescriptionView alloc] initWithXib];
+    [descriptionView initWith:@"Random" andDescription:@"More random stuff" ];
+    [self.scrollView addSubview:descriptionView];
+
+    
+    CGFloat xOrigin = 1 * self.scrollView.frame.size.width;
+    ELSMapView *mapView = [[ELSMapView alloc] initWithXib] ;
+    CGRect tempFrame = CGRectMake(xOrigin, 0, 320, 280) ;
+    [mapView setFrame:tempFrame];
+    
+    [self.scrollView addSubview:mapView];
+    self.scrollView.pagingEnabled = YES ;
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 2, self.scrollView.frame.size.height);
+    
+    [self initDataFromRiboter:self.ribotInfo];
 }
 
--(void) alterBGColorWith:(NSString*) color {
-    // Handling the lack of HexColor
-    if( color != nil ){
-        self.backgroundColor =  [self colorWithHexString:color ];
-    }
-    else  self.backgroundColor = [UIColor grayColor];
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
+
+-(void) initDataFromRiboter:(RibotMember*) member {
+    self.firstNameLabel.text = member.firstName ;
+    self.lastNameLabel.text = member.lastName ;
+    self.nicknameLabel.text = member.nickName;
+    
+    self.ribotar.image = [UIImage imageWithData:member.ribotar];
+    
+    }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 
 
@@ -79,8 +112,6 @@
     [[NSScanner scannerWithString: fullHex] scanHexInt: &hexComponent];
     return hexComponent / 255.0;
 }
-
-
 
 
 

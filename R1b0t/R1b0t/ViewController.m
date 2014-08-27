@@ -98,4 +98,6 @@ NSInteger currentIndex = -1 ;
     [nextView initViewWithDetail:self.assets[currentIndex]];
 }
 
+
+
 @end

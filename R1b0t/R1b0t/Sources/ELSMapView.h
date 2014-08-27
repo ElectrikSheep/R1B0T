@@ -13,5 +13,5 @@
 @property (strong, nonatomic) IBOutlet MKMapView *mapKit;
 
 -(id) initWithXib ;
-
+-(void) initMapWithAddressWith:(NSString*) address;
 @end

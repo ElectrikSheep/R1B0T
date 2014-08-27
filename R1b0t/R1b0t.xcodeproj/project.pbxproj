@@ -25,6 +25,8 @@
 		DBE6094019ADEC86006D84A4 /* UIColor+ColorConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE6093F19ADEC86006D84A4 /* UIColor+ColorConverter.m */; };
 		DBE6094219ADF7AE006D84A4 /* randomInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE6094119ADF7AE006D84A4 /* randomInfoView.xib */; };
 		DBE6094519ADF7CD006D84A4 /* ELSRandomInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE6094419ADF7CD006D84A4 /* ELSRandomInfoView.m */; };
+		DBE6094719AE1B61006D84A4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE6094619AE1B61006D84A4 /* MapKit.framework */; };
+		DBE6094919AE1B69006D84A4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE6094819AE1B69006D84A4 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		DBE6094119ADF7AE006D84A4 /* randomInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = randomInfoView.xib; path = Assets/randomInfoView.xib; sourceTree = "<group>"; };
 		DBE6094319ADF7CD006D84A4 /* ELSRandomInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELSRandomInfoView.h; path = Sources/ELSRandomInfoView.h; sourceTree = "<group>"; };
 		DBE6094419ADF7CD006D84A4 /* ELSRandomInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELSRandomInfoView.m; path = Sources/ELSRandomInfoView.m; sourceTree = "<group>"; };
+		DBE6094619AE1B61006D84A4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DBE6094819AE1B69006D84A4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBE6094919AE1B69006D84A4 /* UIKit.framework in Frameworks */,
+				DBE6094719AE1B61006D84A4 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +127,8 @@
 		DBD56B9A19AB82D300DB4EEF = {
 			isa = PBXGroup;
 			children = (
+				DBE6094819AE1B69006D84A4 /* UIKit.framework */,
+				DBE6094619AE1B61006D84A4 /* MapKit.framework */,
 				DBD56BA519AB82D300DB4EEF /* R1b0t */,
 				DBD56BBF19AB82D400DB4EEF /* R1b0tTests */,
 				DBD56BA419AB82D300DB4EEF /* Products */,

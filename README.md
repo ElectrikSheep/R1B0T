@@ -12,12 +12,20 @@ there was a change in the CoreData model the application WILL crash.
 To fix this simply manually delete the App before re-installing 
 
 
+HOW TO INSTALL
+==============
+
+Download or clone the whole project. 
+Open the file R1B0T/R1b0t.xcodeproj
+You will need Xcode 5.1 or over.
+
+
 TO DO
 =====
 
-- Fix the map
-- Add one more information pannel in the Detail scroll view
-(COMIC relief) create mysef as a Riboter and add to the list
+- Get GeoPosition from Street Address to initialise MKMapView
+- Check for an internet connection to make sure the app can pull the data
+
 
 FEATURES
 ========

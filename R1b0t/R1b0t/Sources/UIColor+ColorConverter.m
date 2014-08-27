@@ -1,38 +1,17 @@
 //
-//  ELSCollectionViewCell.m
+//  UIColor+ColorConverter.m
 //  R1b0t
 //
-//  Created by L on 2014-08-26.
+//  Created by L on 2014-08-27.
 //  Copyright (c) 2014 ElectrikSheep. All rights reserved.
 //
 
-#import "ELSCollectionViewCell.h"
 #import "UIColor+ColorConverter.h"
 
-@implementation ELSCollectionViewCell
-
--(void) initCellWith:(NSString*)name andImage:(UIImage*)ribotar {
-    self.riboterName.text = name ;
-    self.riboterRibotar.image = ribotar ;
-}
-
--(void) alterBGColorWith:(NSString*) color {
-    // Handling the lack of HexColor
-    if( color != nil ){
-        self.backgroundColor = [UIColor colorWithHexString:color] ;
-    }
-    
-
-    else  self.backgroundColor = [UIColor grayColor];
-}
+@implementation UIColor (ColorConverter)
 
 
-
-
-
-
-
--(UIColor *) colorWithHexString: (NSString *) hexString {
++(UIColor *) colorWithHexString: (NSString *) hexString {
     NSString *colorString = [[hexString stringByReplacingOccurrencesOfString: @"#" withString: @""] uppercaseString];
     CGFloat alpha, red, blue, green;
     switch ([colorString length]) {
@@ -67,16 +46,13 @@
     return [UIColor colorWithRed: red green: green blue: blue alpha: alpha];
 }
 
--(CGFloat) colorComponentFrom: (NSString *) string start: (NSUInteger) start length: (NSUInteger) length {
++(CGFloat) colorComponentFrom: (NSString *) string start: (NSUInteger) start length: (NSUInteger) length {
     NSString *substring = [string substringWithRange: NSMakeRange(start, length)];
     NSString *fullHex = length == 2 ? substring : [NSString stringWithFormat: @"%@%@", substring, substring];
     unsigned hexComponent;
     [[NSScanner scannerWithString: fullHex] scanHexInt: &hexComponent];
     return hexComponent / 255.0;
 }
-
-
-
 
 
 @end

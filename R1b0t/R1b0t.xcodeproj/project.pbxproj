@@ -22,6 +22,7 @@
 		DBD56BB719AB82D300DB4EEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD56BB619AB82D300DB4EEF /* Images.xcassets */; };
 		DBD56BC319AB82D400DB4EEF /* R1b0tTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD56BC219AB82D400DB4EEF /* R1b0tTests.m */; };
 		DBD7595819AC6EB400F947B1 /* RibotMember.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7595719AC6EB400F947B1 /* RibotMember.m */; };
+		DBE6094019ADEC86006D84A4 /* UIColor+ColorConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE6093F19ADEC86006D84A4 /* UIColor+ColorConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		DBD56BC219AB82D400DB4EEF /* R1b0tTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = R1b0tTests.m; sourceTree = "<group>"; };
 		DBD7595619AC6EB400F947B1 /* RibotMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RibotMember.h; sourceTree = "<group>"; };
 		DBD7595719AC6EB400F947B1 /* RibotMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RibotMember.m; sourceTree = "<group>"; };
+		DBE6093E19ADEC86006D84A4 /* UIColor+ColorConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ColorConverter.h"; path = "Sources/UIColor+ColorConverter.h"; sourceTree = "<group>"; };
+		DBE6093F19ADEC86006D84A4 /* UIColor+ColorConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ColorConverter.m"; path = "Sources/UIColor+ColorConverter.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,8 @@
 			children = (
 				DBD56BA719AB82D300DB4EEF /* Info.plist */,
 				DBD56BA819AB82D300DB4EEF /* main.m */,
+				DBE6093E19ADEC86006D84A4 /* UIColor+ColorConverter.h */,
+				DBE6093F19ADEC86006D84A4 /* UIColor+ColorConverter.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 				DBD56BAC19AB82D300DB4EEF /* AppDelegate.m in Sources */,
 				DB91899919ACFE45008B7E77 /* ELSMapView.m in Sources */,
 				DB91899319ACF008008B7E77 /* ELSdescriptionView.m in Sources */,
+				DBE6094019ADEC86006D84A4 /* UIColor+ColorConverter.m in Sources */,
 				DB3D4B7019ACB88F00D3F23D /* ELSCollectionViewCell.m in Sources */,
 				DBD7595819AC6EB400F947B1 /* RibotMember.m in Sources */,
 				DBD56BAF19AB82D300DB4EEF /* R1b0t.xcdatamodeld in Sources */,

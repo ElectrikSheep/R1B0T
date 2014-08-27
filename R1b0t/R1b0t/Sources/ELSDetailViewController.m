@@ -68,8 +68,16 @@
     [mapView setFrame:tempFrame];
     
     [self.scrollView addSubview:mapView];
+    
+    xOrigin = 2 * self.scrollView.frame.size.width;
+    ELSRandomInfoView *randomView = [[ELSRandomInfoView alloc] initWithXib] ;
+    [randomView initWith:self.ribotInfo.favTweet andSeason:self.ribotInfo.favSeason];
+    tempFrame = CGRectMake(xOrigin, 0, 320, 280) ;
+    [randomView setFrame:tempFrame];
+    
+    [self.scrollView addSubview:randomView];
     self.scrollView.pagingEnabled = YES ;
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 2, self.scrollView.frame.size.height);
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 3, self.scrollView.frame.size.height);
 
     
     }
@@ -86,7 +94,7 @@
 
 #pragma mark BTN_ACTIONS
 
-// Will trigger a NAtive iOS Mail composer to send an email to the selected Riboter
+// Will trigger a Native iOS Mail composer to send an email to the selected Riboter
 - (IBAction)actionMailComposer:(id)sender {
     MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
     controller.mailComposeDelegate = self;

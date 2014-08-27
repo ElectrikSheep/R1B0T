@@ -13,6 +13,7 @@
 
 // For the secondary views and populate them
 #import "ELSdescriptionView.h"
+#import "ELSRandomInfoView.h"
 #import "ELSMapView.h"
 
 // To import the color from HEX string ;

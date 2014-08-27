@@ -18,10 +18,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-
+    // TODO
+    // Check if device can connect to pull the latest data
     
-    //ELSImporter *importer = [[ELSImporter alloc] initWithContext:self.managedObjectContext] ;
-    //[importer createRibotersEntitiesInCoreData];
+    // Pull the latest data
+    ELSImporter *importer = [[ELSImporter alloc] initWithContext:self.managedObjectContext] ;
+   // [importer createRibotersEntitiesInCoreData];
     
     return YES;
 }

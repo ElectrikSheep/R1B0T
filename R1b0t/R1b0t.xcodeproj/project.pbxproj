@@ -23,6 +23,8 @@
 		DBD56BC319AB82D400DB4EEF /* R1b0tTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD56BC219AB82D400DB4EEF /* R1b0tTests.m */; };
 		DBD7595819AC6EB400F947B1 /* RibotMember.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD7595719AC6EB400F947B1 /* RibotMember.m */; };
 		DBE6094019ADEC86006D84A4 /* UIColor+ColorConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE6093F19ADEC86006D84A4 /* UIColor+ColorConverter.m */; };
+		DBE6094219ADF7AE006D84A4 /* randomInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBE6094119ADF7AE006D84A4 /* randomInfoView.xib */; };
+		DBE6094519ADF7CD006D84A4 /* ELSRandomInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE6094419ADF7CD006D84A4 /* ELSRandomInfoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,9 @@
 		DBD7595719AC6EB400F947B1 /* RibotMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RibotMember.m; sourceTree = "<group>"; };
 		DBE6093E19ADEC86006D84A4 /* UIColor+ColorConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+ColorConverter.h"; path = "Sources/UIColor+ColorConverter.h"; sourceTree = "<group>"; };
 		DBE6093F19ADEC86006D84A4 /* UIColor+ColorConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ColorConverter.m"; path = "Sources/UIColor+ColorConverter.m"; sourceTree = "<group>"; };
+		DBE6094119ADF7AE006D84A4 /* randomInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = randomInfoView.xib; path = Assets/randomInfoView.xib; sourceTree = "<group>"; };
+		DBE6094319ADF7CD006D84A4 /* ELSRandomInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ELSRandomInfoView.h; path = Sources/ELSRandomInfoView.h; sourceTree = "<group>"; };
+		DBE6094419ADF7CD006D84A4 /* ELSRandomInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ELSRandomInfoView.m; path = Sources/ELSRandomInfoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +105,9 @@
 			children = (
 				DB91898C19ACE299008B7E77 /* descriptionView.xib */,
 				DB91898E19ACEFA4008B7E77 /* mapView.xib */,
+				DBE6094119ADF7AE006D84A4 /* randomInfoView.xib */,
+				DBE6094319ADF7CD006D84A4 /* ELSRandomInfoView.h */,
+				DBE6094419ADF7CD006D84A4 /* ELSRandomInfoView.m */,
 				DB91899119ACF008008B7E77 /* ELSdescriptionView.h */,
 				DB91899219ACF008008B7E77 /* ELSdescriptionView.m */,
 				DB91899719ACFE45008B7E77 /* ELSMapView.h */,
@@ -275,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBD56BB519AB82D300DB4EEF /* Main.storyboard in Resources */,
+				DBE6094219ADF7AE006D84A4 /* randomInfoView.xib in Resources */,
 				DB91898F19ACEFA4008B7E77 /* mapView.xib in Resources */,
 				DB91898D19ACE299008B7E77 /* descriptionView.xib in Resources */,
 				DBD56BB719AB82D300DB4EEF /* Images.xcassets in Resources */,
@@ -305,6 +314,7 @@
 				DBD56BAF19AB82D300DB4EEF /* R1b0t.xcdatamodeld in Sources */,
 				DBD56BB219AB82D300DB4EEF /* ViewController.m in Sources */,
 				DBD56BA919AB82D300DB4EEF /* main.m in Sources */,
+				DBE6094519ADF7CD006D84A4 /* ELSRandomInfoView.m in Sources */,
 				DB91899619ACF374008B7E77 /* ELSDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,16 +23,12 @@
         
     NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"descriptionView" owner:self options:nil];
     return [subviewArray objectAtIndex:0];
-    
-    return self;
 }
 
 
 -(void) initWith:(NSString*)role andDescription:(NSString*) description {
     self.descriptionLabel.text = description ;
     self.roleLabel.text = role ;
-    
-    NSLog(@"This is done") ;
 }
 
 @end

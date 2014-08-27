@@ -25,6 +25,10 @@
 @dynamic role;
 @dynamic twitter;
 
+
+// Create or find a RibotMember from a NSDictionary
+// Need to give the managed context for saving/checking purposes
+// If ribot member already exists, nothing happens
 + (RibotMember *)itemWithParsedDictionary:(NSDictionary *)parsedItem inManagedObjectContext:(NSManagedObjectContext *)context
 {
     RibotMember *item;

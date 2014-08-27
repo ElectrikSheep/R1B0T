@@ -20,6 +20,7 @@
 
 @synthesize managedObjectContext;
 
+// When sending a segue we need to know which cell was selected
 NSInteger currentIndex = -1 ;
 
 - (void)viewDidLoad {
@@ -58,7 +59,7 @@ NSInteger currentIndex = -1 ;
  }
 -(void) collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    // Can't do that
 }
 
 
@@ -91,7 +92,7 @@ NSInteger currentIndex = -1 ;
     return 1;
 }
 
-
+// Prepare the next view by passing it a RibotMember entity
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     ELSDetailViewController *nextView = (ELSDetailViewController*) [segue destinationViewController] ;
     [nextView initViewWithDetail:self.assets[currentIndex]];

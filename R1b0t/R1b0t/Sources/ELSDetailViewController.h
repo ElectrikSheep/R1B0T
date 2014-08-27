@@ -30,6 +30,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *lastNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *nicknameLabel;
 
+@property (strong, nonatomic) IBOutlet UIButton *btnTwitter;
+@property (strong, nonatomic) IBOutlet UIButton *btnEmail;
 
 
 -(void) initViewWithDetail:(RibotMember*) teammate ;

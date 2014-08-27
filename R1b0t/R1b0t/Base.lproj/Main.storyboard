@@ -151,10 +151,12 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.16296322374379724" blue="0.83136644078697952" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="H6d-sU-Ntj"/>
                     <connections>
+                        <outlet property="btnEmail" destination="jP7-Wf-xe4" id="Djc-2M-tBf"/>
+                        <outlet property="btnTwitter" destination="Cwi-jr-tKk" id="5W2-wb-zQt"/>
                         <outlet property="firstNameLabel" destination="zO0-PY-e0Q" id="xkG-GK-2cQ"/>
                         <outlet property="lastNameLabel" destination="ZhB-SC-Wlq" id="HVh-8e-mzA"/>
                         <outlet property="nicknameLabel" destination="ODs-BM-44I" id="31D-14-uCd"/>

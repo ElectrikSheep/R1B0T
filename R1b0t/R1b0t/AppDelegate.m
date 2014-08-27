@@ -18,8 +18,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-   ELSImporter *importer = [[ELSImporter alloc] initWithContext:self.managedObjectContext] ;
-    [importer createRibotersEntitiesInCoreData];
+
+    
+    //ELSImporter *importer = [[ELSImporter alloc] initWithContext:self.managedObjectContext] ;
+    //[importer createRibotersEntitiesInCoreData];
     
     return YES;
 }

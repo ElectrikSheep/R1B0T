@@ -21,9 +21,10 @@
 
 #import <MessageUI/MFMailComposeViewController.h>
 
-@interface ELSDetailViewController : UIViewController <MFMailComposeViewControllerDelegate>
+@interface ELSDetailViewController : UIViewController <MFMailComposeViewControllerDelegate, UIScrollViewDelegate>
 
 @property(strong , nonatomic) RibotMember* ribotInfo ;
+@property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIImageView *ribotar;

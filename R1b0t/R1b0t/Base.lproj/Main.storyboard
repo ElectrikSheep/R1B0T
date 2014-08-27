@@ -134,12 +134,10 @@
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9n-c1-6CL">
                                 <rect key="frame" x="0.0" y="288" width="320" height="280"/>
-                                <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="BnQ-IN-PR0">
-                                        <rect key="frame" x="141" y="237" width="39" height="37"/>
-                                    </pageControl>
-                                </subviews>
                                 <color key="backgroundColor" red="0.56081664364640882" green="0.56081664364640882" blue="0.56081664364640882" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BnQ-IN-PR0" id="3oK-6g-Ynj"/>
+                                </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jP7-Wf-xe4">
                                 <rect key="frame" x="250" y="190" width="60" height="60"/>
@@ -150,6 +148,9 @@
                                     <action selector="actionMailComposer:" destination="bYd-XG-Crd" eventType="touchUpInside" id="BSn-z7-OVh"/>
                                 </connections>
                             </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="BnQ-IN-PR0">
+                                <rect key="frame" x="140" y="530" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="0.25098040699958801" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -160,6 +161,7 @@
                         <outlet property="firstNameLabel" destination="zO0-PY-e0Q" id="xkG-GK-2cQ"/>
                         <outlet property="lastNameLabel" destination="ZhB-SC-Wlq" id="HVh-8e-mzA"/>
                         <outlet property="nicknameLabel" destination="ODs-BM-44I" id="31D-14-uCd"/>
+                        <outlet property="pageControl" destination="BnQ-IN-PR0" id="eel-72-Vea"/>
                         <outlet property="ribotar" destination="VnC-s3-Ix5" id="z4x-gT-4Ih"/>
                         <outlet property="scrollView" destination="h9n-c1-6CL" id="B2j-pZ-TkW"/>
                     </connections>

@@ -23,7 +23,7 @@
     
     // Pull the latest data
     ELSImporter *importer = [[ELSImporter alloc] initWithContext:self.managedObjectContext] ;
-   // [importer createRibotersEntitiesInCoreData];
+    [importer createRibotersEntitiesInCoreData];
     
     return YES;
 }

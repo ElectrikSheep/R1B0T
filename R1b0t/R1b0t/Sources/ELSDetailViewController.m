@@ -138,7 +138,11 @@
     }
 }
 
-
+-(void) scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSInteger page = (NSInteger)floor((scrollView.contentOffset.x * 2.0f + scrollView.frame.size.width) / (scrollView.frame.size.width * 2.0f));
+    self.pageControl.currentPage = page ;
+    [self.pageControl updateCurrentPageDisplay];
+}
 
 
 @end

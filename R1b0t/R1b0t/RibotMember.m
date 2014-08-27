@@ -46,7 +46,7 @@
             item.nickName = parsedItem[@"nickname"];
             item.location = parsedItem[@"location"];
             item.role = parsedItem[@"role"];
-            item.hexColor = parsedItem[@"hexColor"];
+            item.hexColor = parsedItem[@"hexColor"] == nil ? @"#0000" : parsedItem[@"hexColor"];
             item.twitter = parsedItem[@"twitter"];
             item.email = parsedItem[@"email"];
             item.favTweet = parsedItem[@"favSweet"];

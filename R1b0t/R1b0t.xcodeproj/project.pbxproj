@@ -131,6 +131,7 @@
 		DBD56BA519AB82D300DB4EEF /* R1b0t */ = {
 			isa = PBXGroup;
 			children = (
+				DB3D4B7119ACB93B00D3F23D /* CollectionView */,
 				DB91899019ACEFD3008B7E77 /* AdditionalViews */,
 				DBD7595A19AC862300F947B1 /* JSON */,
 				DBD7595919AC6EC500F947B1 /* CoreData */,
@@ -143,7 +144,6 @@
 				DBD56BAD19AB82D300DB4EEF /* R1b0t.xcdatamodeld */,
 				DBD56BA619AB82D300DB4EEF /* Supporting Files */,
 				DB229D1819ABD0DB00434B69 /* R1b0t-Bridging-Header.h */,
-				DB3D4B7119ACB93B00D3F23D /* CollectionView */,
 			);
 			path = R1b0t;
 			sourceTree = "<group>";

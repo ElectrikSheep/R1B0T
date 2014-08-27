@@ -15,6 +15,9 @@
 #import "ELSdescriptionView.h"
 #import "ELSMapView.h"
 
+// To import the color from HEX string ;
+#import "UIColor+ColorConverter.h"
+
 #import <MessageUI/MFMailComposeViewController.h>
 
 @interface ELSDetailViewController : UIViewController <MFMailComposeViewControllerDelegate>

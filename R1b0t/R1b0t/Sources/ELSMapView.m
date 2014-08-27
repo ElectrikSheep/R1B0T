@@ -16,7 +16,9 @@
     self = [super init];
     
     NSArray *subviewArray = [[NSBundle mainBundle] loadNibNamed:@"mapView" owner:self options:nil];
+    [self setAlpha:.3];
     return [subviewArray objectAtIndex:0];
+    
     
     return self;
 }

@@ -14,12 +14,6 @@
 
 -(void) initCellWith:(NSString*)name andImage:(UIImage*)ribotar {
     self.riboterName.text = name ;
-    
-    // Handling the lack of 'Ribotar'
-    if( ribotar == nil ) {
-        NSLog(@"YOU FAILED YOU FAILED YOU FAILED") ;
-        ribotar = [UIImage imageNamed:@"img_GenericRibotar"] ;
-    }
     self.riboterRibotar.image = ribotar ;
 }
 

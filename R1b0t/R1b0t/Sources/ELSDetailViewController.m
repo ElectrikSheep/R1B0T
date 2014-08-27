@@ -24,7 +24,8 @@
     
     // Adding the SubViews to the scroll view
     ELSdescriptionView *descriptionView = [[ELSdescriptionView alloc] initWithXib];
-    [descriptionView initWith:@"Random" andDescription:@"More random stuff" ];
+    [descriptionView initWith:self.ribotInfo.role
+               andDescription:self.ribotInfo.rDescription ];
     [self.scrollView addSubview:descriptionView];
 
     
@@ -53,6 +54,10 @@
     
     self.ribotar.image = [UIImage imageWithData:member.ribotar];
     
+    if( self.ribotInfo.hexColor != nil ){
+        self.view.backgroundColor =  [self colorWithHexString:self.ribotInfo.hexColor ];
+    }
+    else  self.view.backgroundColor = [UIColor grayColor];
     }
 
 /*
@@ -65,6 +70,45 @@
 }
 */
 
+#pragma mark BTN_ACTIONS
+
+- (IBAction)actionMailComposer:(id)sender {
+    MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
+    controller.mailComposeDelegate = self;
+    [controller setSubject:@"DO NOT PRESS SEND"];
+    NSLog(@"%@", self.ribotInfo.email) ;
+    NSArray *toRecipents = [NSArray arrayWithObject:self.ribotInfo.email] ;
+    [controller setToRecipients:toRecipents] ;
+    [controller setMessageBody:@"" isHTML:NO];
+    if (controller)
+        [self presentViewController:controller animated:YES completion:nil];
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller
+          didFinishWithResult:(MFMailComposeResult)result
+                        error:(NSError*)error;
+{
+    if (result == MFMailComposeResultSent) {
+        NSLog(@"It's away!");
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)actionTwitterViewer:(id)sender {
+    // Check if twitter app is installed on the device
+    
+    NSString*query = [NSString stringWithFormat:@"twitter://user?screen_name=%@", self.ribotInfo.twitter] ;
+    if( [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:query]] ){
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:query]];
+    }
+    else {
+        query = [NSString stringWithFormat:@"https://twitter.com/%@", self.ribotInfo.twitter] ;
+        if (![[UIApplication sharedApplication] openURL:[NSURL URLWithString:query]]) {
+            NSLog(@"%@%@",@"Failed to open url:",query);
+        }
+    }
+    
+}
 
 
 

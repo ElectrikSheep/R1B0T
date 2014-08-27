@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+// Access the Ribot Entity
 #import "RibotMember.h"
 
+// For the secondary views and populate them
 #import "ELSdescriptionView.h"
 #import "ELSMapView.h"
 
-@interface ELSDetailViewController : UIViewController
+#import <MessageUI/MFMailComposeViewController.h>
+
+@interface ELSDetailViewController : UIViewController <MFMailComposeViewControllerDelegate>
 
 @property(strong , nonatomic) RibotMember* ribotInfo ;
 
